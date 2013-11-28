@@ -1,0 +1,3 @@
+[2013-10-25 20:09:36.326000]
+ERROR
+	"[Failure instance: Traceback from remote host -- Traceback unavailable\nexceptions.AttributeError: 'NoneType' object has no attribute 'getFightData'\n]"

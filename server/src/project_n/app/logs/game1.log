@@ -1,0 +1,38 @@
+[2013-10-25 20:09:36.323000]
+ERROR
+	Peer will receive following PB traceback:
+[2013-10-25 20:09:36.325000]
+ERROR
+	Unhandled Error
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\twisted\spread\banana.py", line 153, in gotItem
+    self.callExpressionReceived(item)
+  File "D:\Python27\lib\site-packages\twisted\spread\banana.py", line 116, in callExpressionReceived
+    self.expressionReceived(obj)
+  File "D:\Python27\lib\site-packages\twisted\spread\pb.py", line 565, in expressionReceived
+    method(*sexp[1:])
+  File "D:\Python27\lib\site-packages\twisted\spread\pb.py", line 877, in proto_message
+    self._recvMessage(self.localObjectForID, requestID, objectID, message, answerRequired, netArgs, netKw)
+--- <exception caught here> ---
+  File "D:\Python27\lib\site-packages\twisted\spread\pb.py", line 891, in _recvMessage
+    netResult = object.remoteMessageReceived(self, message, netArgs, netKw)
+  File "D:\Python27\lib\site-packages\twisted\spread\flavors.py", line 114, in remoteMessageReceived
+    state = method(*args, **kw)
+  File "D:\Python27\lib\site-packages\firefly-1.2.4dev-py2.7.egg\firefly\distributed\reference.py", line 26, in remote_callChild
+    return self._service.callTarget(command,*arg,**kw)
+  File "D:\Python27\lib\site-packages\firefly-1.2.4dev-py2.7.egg\firefly\utils\services.py", line 84, in callTarget
+    result = self.callTargetSingle(targetKey,*args,**kw)
+  File "D:\Python27\lib\site-packages\firefly-1.2.4dev-py2.7.egg\firefly\utils\services.py", line 104, in callTargetSingle
+    defer_data = target(*args,**kw)
+  File "E:\workspace\project_n\app\game\gatenodeapp\arean.py", line 27, in ArenaBattle_3704
+    data = arena.ArenaBattle_3704(dynamicId, characterId, tocharacterId)
+  File "E:\workspace\project_n\app\game\appinterface\arena.py", line 29, in ArenaBattle_3704
+    fit = fight.Fight(nbatt, tbatt)
+  File "E:\workspace\project_n\app\game\core\fight\fight.py", line 86, in __init__
+    self.fixBattleSidePosition()    #初始化战场
+  File "E:\workspace\project_n\app\game\core\fight\fight.py", line 112, in fixBattleSidePosition
+    for passiveMember in self.passiveSide.getMembers():#初始化主动方
+  File "E:\workspace\project_n\app\game\core\fight\battleSide.py", line 40, in getMembers
+    data = member.getFightData()
+exceptions.AttributeError: 'NoneType' object has no attribute 'getFightData'
+

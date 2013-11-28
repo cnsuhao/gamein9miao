@@ -1,0 +1,6 @@
+[2013-10-25 20:09:36.325000]
+ERROR
+	Unhandled Error
+Traceback from remote host -- Traceback unavailable
+exceptions.AttributeError: 'NoneType' object has no attribute 'getFightData'
+
